@@ -16,6 +16,9 @@ public class ProductsPage {
     @FindBy(className = "shopping_cart_badge")
     private WebElement shoppingCartBadge;
 
+    @FindBy(xpath = "//img[@alt='Sauce Labs Backpack' and @src='/static/media/sl-404.168b1cce.jpg']")
+    private WebElement wrongItemImage;
+
     public ProductsPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);

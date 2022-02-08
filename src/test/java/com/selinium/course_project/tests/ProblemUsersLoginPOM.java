@@ -11,11 +11,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
-public class UnsuccessfulLoginPOM extends TestBaseUtil {
-
-    @DataProvider(name = "wrongUsersReadFromCsvFile")
+public class ProblemUsersLoginPOM extends TestBaseUtil {
+    @DataProvider(name = "problemUsersReadFromCsvFile")
     public Object [][] readWrongUsersFromCsv() throws IOException, CsvException {
-        try (CSVReader csvReader = new CSVReader(new FileReader("src/test/resources/wrongUsersList.csv"))) {
+        try (CSVReader csvReader = new CSVReader(new FileReader("src/test/resources/problemUsersList.csv"))) {
             List<String[]> csvData = csvReader.readAll();
             Object[][] csvDataObject = new Object[csvData.size()][2];
             for (int i = 0; i < csvData.size(); i++) {
@@ -25,8 +24,8 @@ public class UnsuccessfulLoginPOM extends TestBaseUtil {
         }
     }
 
-    @Test(dataProvider = "wrongUsersReadFromCsvFile")
-    public void unsuccessfulLoginWithWrongUsers(String userName, String password){
+    @Test(dataProvider = "problemUsersReadFromCsvFile")
+    public void problemUsersLogin(String userName, String password){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(userName, password);
     }

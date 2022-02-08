@@ -14,5 +14,6 @@ public class CheckoutPOM extends TestBaseUtil {
         CheckoutStepOnePage checkoutStepOnePage = cartPage.continueToCheckoutStepOnePage();
         CheckoutStepTwoPage checkoutStepTwoPage = checkoutStepOnePage.nameAndPostalCodeInput();
         CheckoutCompletePage checkoutCompletePage = checkoutStepTwoPage.finishCheckout();
+
     }
 }

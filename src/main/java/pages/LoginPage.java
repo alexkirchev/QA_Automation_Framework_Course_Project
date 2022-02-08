@@ -17,6 +17,9 @@ public class LoginPage {
     @FindBy(name = "login-button")
     private WebElement loginButton;
 
+    @FindBy(xpath = "//h3[text()='Epic sadface: Sorry, this user has been locked out.']")
+    private WebDriver lockedUserErrorMessage;
+
     public LoginPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
