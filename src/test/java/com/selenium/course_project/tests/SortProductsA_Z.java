@@ -1,4 +1,4 @@
-package com.selinium.course_project.tests;
+package com.selenium.course_project.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

@@ -1,6 +1,6 @@
-package com.selinium.course_project.tests;
+package com.selenium.course_project.tests;
 
-import com.selinium.course_project.tests.base.TestBaseUtil;
+import com.selenium.course_project.tests.base.TestBaseUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;

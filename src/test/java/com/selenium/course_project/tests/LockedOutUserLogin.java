@@ -1,17 +1,10 @@
-package com.selinium.course_project.tests;
+package com.selenium.course_project.tests;
 
-import com.opencsv.CSVReader;
-import com.opencsv.exceptions.CsvException;
-import com.selinium.course_project.tests.base.TestBaseUtil;
+import com.selenium.course_project.tests.base.TestBaseUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.List;
 
 public class LockedOutUserLogin extends TestBaseUtil {
 

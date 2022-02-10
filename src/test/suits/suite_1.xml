@@ -1,11 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite thread-count="4" verbose="1" name="QA Automation course project"
+<suite thread-count="4" verbose="1" name="QA Automation course project_1"
        annotations="JDK" parallel="tests">
 
-    <test name="Products Test Suite">
+    <test name="Successful Login POM">
         <classes>
-            <class name="com.selenium.course_project.tests.ProductsTestsPOM"/>
+            <class name="com.selenium.course_project.tests.SuccessfulLoginPOM"/>
         </classes>
     </test>
     <test name="Unsuccessful Login POM Suite">
@@ -13,14 +13,14 @@
             <class name="com.selenium.course_project.tests.UnsuccessfulLoginPOM"/>
         </classes>
     </test>
-    <test name="Checkout">
+    <test name="Checkout POM">
         <classes>
-            <class name="com.selenium.course_project.tests.Checkout"/>
+            <class name="com.selenium.course_project.tests.CheckoutPOM"/>
         </classes>
     </test>
-    <test name="Problem User Login">
+    <test name="Problem User Login POM">
         <classes>
-            <class name="com.selenium.course_project.tests.ProblemUserLogin"/>
+            <class name="com.selenium.course_project.tests.ProblemUsersLoginPOM"/>
         </classes>
     </test>
 </suite>

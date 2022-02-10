@@ -1,18 +1,14 @@
-package com.selinium.course_project.tests.base;
+package com.selenium.course_project.tests.base;
 
 import driver.DriverFactory;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.Properties;
 
 public class TestBaseUtil {
@@ -20,7 +16,7 @@ public class TestBaseUtil {
     private String applicationUrl, targetBrowser;
     private int implicitWaitSeconds, explicitWaitSeconds;
 
-    @BeforeTest
+    @BeforeMethod
     public void setUpNewSession(){
         setupBrowserDriver();
         loadPageUrl();
@@ -46,36 +42,17 @@ public class TestBaseUtil {
         switch (targetBrowser) {
             case "chrome":
                 driver = DriverFactory.setupChromeDriver(implicitWaitSeconds);
-//                getChromeDriver();
                 break;
             case "firefox":
                 driver = DriverFactory.setupFirefoxDriver(implicitWaitSeconds);
-//                getFirefoxDriver();
                 break;
             case "edge":
                 driver = DriverFactory.setupEdgeDriver(implicitWaitSeconds);
-//                getEdgeDriver();
                 break;
         }
     }
 
-//    private WebDriver getChromeDriver(){
-//        driver = DriverFactory.setupChromeDriver(implicitWaitSeconds);
-//        return driver;
-//    }
-//
-//    private WebDriver getFirefoxDriver(){
-//        driver = DriverFactory.setupFirefoxDriver(implicitWaitSeconds);
-//        return driver;
-//    }
-//
-//    private WebDriver getEdgeDriver(){
-//        driver = DriverFactory.setupEdgeDriver(implicitWaitSeconds);
-//        return driver;
-//    }
-
-
-//    @AfterTest
+    @AfterMethod
     public void tearDownSession(){
         driver.quit();
     }
