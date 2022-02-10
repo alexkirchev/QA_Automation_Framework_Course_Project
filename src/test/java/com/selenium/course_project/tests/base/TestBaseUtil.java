@@ -52,7 +52,7 @@ public class TestBaseUtil {
         }
     }
 
-    @AfterMethod
+    @AfterTest
     public void tearDownSession(){
         driver.quit();
     }
