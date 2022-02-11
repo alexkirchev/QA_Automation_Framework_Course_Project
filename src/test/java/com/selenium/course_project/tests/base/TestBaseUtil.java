@@ -16,7 +16,7 @@ public class TestBaseUtil {
     private String applicationUrl, targetBrowser;
     private int implicitWaitSeconds, explicitWaitSeconds;
 
-    @BeforeMethod
+    @BeforeTest
     public void setUpNewSession(){
         setupBrowserDriver();
         loadPageUrl();
