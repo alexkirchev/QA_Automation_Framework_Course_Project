@@ -39,6 +39,5 @@ public class Checkout extends TestBaseUtil {
 
         WebElement ponyExpressLogo = driver.findElement(By.xpath("//span[text()='Checkout: Complete!']"));
         Assert.assertTrue(ponyExpressLogo.isDisplayed());
-
     }
 }

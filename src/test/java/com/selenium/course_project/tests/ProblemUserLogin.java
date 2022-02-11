@@ -23,6 +23,5 @@ public class ProblemUserLogin extends TestBaseUtil {
 
         WebElement wrongItemImage = driver.findElement(By.xpath("//img[@alt='Sauce Labs Backpack' and @src='/static/media/sl-404.168b1cce.jpg']"));
         Assert.assertTrue(wrongItemImage.isDisplayed());
-
     }
 }

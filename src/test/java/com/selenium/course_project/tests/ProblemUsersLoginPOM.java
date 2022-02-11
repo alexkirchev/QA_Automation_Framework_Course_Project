@@ -6,6 +6,7 @@ import com.selenium.course_project.tests.base.TestBaseUtil;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import pages.ProductsPage;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -27,6 +28,6 @@ public class ProblemUsersLoginPOM extends TestBaseUtil {
     @Test(dataProvider = "problemUsersReadFromCsvFile")
     public void problemUsersLogin(String userName, String password){
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.login(userName, password);
+        ProductsPage productsPage = loginPage.login(userName, password);
     }
 }

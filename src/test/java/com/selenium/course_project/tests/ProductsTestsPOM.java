@@ -17,6 +17,4 @@ public class ProductsTestsPOM extends TestBaseUtil {
 
         Assert.assertEquals(productsPage.getNumbersInCart(), 3, "3 items was added in cart");
     }
-
-
 }

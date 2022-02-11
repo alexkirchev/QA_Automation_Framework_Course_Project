@@ -28,8 +28,6 @@ public class SortProductsA_Z {
 
     @Test
     public void sortProductsA_Z() {
-//        driver.get("https://www.saucedemo.com/");
-
         WebElement userNameInput = driver.findElement(By.cssSelector("[name=user-name]"));
         userNameInput.clear();
         userNameInput.sendKeys("standard_user");
@@ -43,20 +41,5 @@ public class SortProductsA_Z {
 
         Select productsSortingDropdown = new Select(driver.findElement(By.cssSelector(".product_sort_container")));
         productsSortingDropdown.selectByVisibleText("Name (A to Z)");
-
-
-
-//        List<WebElement> productNameList = driver.findElements(By.className("inventory_item_name"));
-//        boolean returnValue = true;
-//        for(int i = 0; i < productNameList.size()-1; i++){
-//            String name1Item = productNameList.get(i).getText();
-//            String name2Item = productNameList.get(i+1).getText();
-//            if(String.valueOf(name1Item) > String.valueOf(name2Item));
-//            returnValue = false;
-//        }
-
-
-
-
     }
 }

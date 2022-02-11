@@ -43,8 +43,5 @@ public class UnsuccessfulLogin extends TestBaseUtil {
 
         WebElement loginErrorMessage = driver.findElement(By.xpath("//h3[@data-test='error']"));
         Assert.assertTrue(loginErrorMessage.isDisplayed());
-
     }
-
-
 }

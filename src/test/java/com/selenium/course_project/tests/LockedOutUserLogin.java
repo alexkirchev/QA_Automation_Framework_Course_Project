@@ -24,7 +24,5 @@ public class LockedOutUserLogin extends TestBaseUtil {
 
         WebElement loginErrorMessage = driver.findElement(By.xpath("//h3[text()='Epic sadface: Sorry, this user has been locked out.']"));
         Assert.assertTrue(loginErrorMessage.isDisplayed());
-
     }
-
 }
